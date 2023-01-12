@@ -1,4 +1,4 @@
-package handler
+package handlers
 
 import (
 	"net/http"
@@ -11,7 +11,7 @@ type Service struct {
 	service tickets.Service
 }
 
-func NewService(s tickets.Service) *Service {
+func NewHandler(s tickets.Service) *Service {
 	return &Service{
 		service: s,
 	}

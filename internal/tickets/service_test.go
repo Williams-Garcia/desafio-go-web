@@ -104,7 +104,7 @@ func TestGetTicketByDestination(t *testing.T) {
 		err: nil,
 	}
 	repo := NewRepositoryTest(dbMock)
-	service := NewService(repo)
+	service := NewService(&repo)
 
 	tkts, err := service.GetTotalTickets(cxt, "China")
 
@@ -121,7 +121,7 @@ func TestGetTotalTickets(t *testing.T) {
 		err: nil,
 	}
 	repo := NewRepositoryTest(dbMock)
-	service := NewService(repo)
+	service := NewService(&repo)
 
 	avr, err := service.AverageDestination(cxt, "China")
 
